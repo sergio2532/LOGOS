@@ -1,11 +1,14 @@
 
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import conexion.Conexion;
 
 /**
  * Servlet implementation class HelloWorld
@@ -26,7 +29,13 @@ public class HelloWorld extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		Conexion conexion = new Conexion();
+		conexion.conectar();
+		if(conexion.getConexion() != null){
+			System.out.println("we have conection");
+		}else{
+			System.out.println(conexion.getMensaje());
+		}
 	}
 
 	/**

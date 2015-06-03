@@ -108,7 +108,7 @@
                     </a>
                 </div> 
                 <div class="row">
-                <form name="sentMessage" id="contactForm" novalidate>
+                <form name="sentMessage" method = "POST" action = "/registrarUsuario" id="contactForm" novalidate>
                 <div class="col-md-7">
                         <div class="row">
                         	<div class="col-md-3">

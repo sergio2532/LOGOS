@@ -26,5 +26,8 @@ public class AsignaturaCurso {
 		this.curso = curso;
 	}
 	
+	public void guaradarCurso(){
+		
+	}
 	
 }

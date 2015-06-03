@@ -49,7 +49,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#page-top">LOGOS</a>
+                <a class="navbar-brand" href="indexAdministrador.jsp">LOGOS</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -65,7 +65,7 @@
                         <a href="#perfil">Perfil</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#cerrarSesion">Cerrar Sesión</a>
+                        <a href="bye.jsp">Cerrar Sesión</a>
                     </li>
                 </ul>
                 
@@ -107,7 +107,7 @@
 			         		</div>
 			         		<div class="col-md-5">
 					            <div id = "numeroT"class="col-lg-7" select style="width:180px" >
-					            	<select id = "numero">
+					            	<select id = "numero" name = "name">
 				      					  <option value="1">1</option>
 				      					  <option value="2">2</option>
 				      					  <option value="3">3</option>
@@ -129,7 +129,7 @@
 			         		</div>
 			         		<div class="col-md-5">
 					            <div id = "letraT"class="col-lg-7" select style="width:180px" >
-					            	<select id = "letra">
+					            	<select id = "letra" name = "letra">
 				      					  <option value="A">A</option>
 				      					  <option value="B">B</option>
 				      					  <option value="C">C</option>

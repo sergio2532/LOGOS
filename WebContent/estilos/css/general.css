@@ -1,0 +1,193 @@
+/* CSS Document */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  background: transparent;
+  color : white;
+}
+
+
+.container {
+	margin:0 auto 0 auto;
+	padding:40px;
+	width:576px;
+	height:auto;
+	background-image:url(../img/fondo_formulario-70.png);
+	background-size:100%;
+	color:#FFF;
+	box-sizing:border-box; 
+	-moz-box-sizing:border-box; /* Firefox */ 
+	-webkit-box-sizing:border-box; /* Safari */
+	font-family:'switzerlandplain', Geneva, sans-serif;
+}
+
+	h1 {
+		font-weight:normal;
+		padding-bottom:30px !important;
+		font-size:18px !important;
+	}
+
+		.text-success {
+			font-size:15px;
+			padding-bottom:0px !important;
+			}
+			
+			.form-group {
+				float:left;
+				width:100%;
+			}
+				.text-success.col-lg-3.control-label, p{
+					font-size:15px;
+					line-height:20px;
+					float:left;
+				}
+				
+				 .col-lg-6 .text-success.col-lg-3.control-label,
+				 .col-lg-3 .text-success.col-lg-3.control-label{
+					 float:right;
+					 width:66%;
+					 
+				 }
+				
+				.form-control {
+					margin-left:20px;
+					margin-bottom:10px;
+					float:right;
+					width:65%;
+					padding-left:10px;
+					border-radius:6px;
+					-moz-border-radius:6px; /* Firefox */ 
+					-webkit-border-radius:6px; /* Safari */
+					height:35px;
+					border:none;
+				}
+				
+				.dropdown-menu>li>a:focus,.dropdown-menu>li>a:hover{
+					background-color:#e8e8e8;
+					background-image:-webkit-linear-gradient(top,#f5f5f5 0,#e8e8e8 100%);
+					background-image:-o-linear-gradient(top,#f5f5f5 0,#e8e8e8 100%);
+					background-image:-webkit-gradient(linear,left top,left bottom,from(#f5f5f5),to(#e8e8e8));
+					background-image:linear-gradient(to bottom,#f5f5f5 0,#e8e8e8 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff5f5f5', endColorstr='#ffe8e8e8', GradientType=0);
+					background-repeat:repeat-x
+					
+				}
+				
+				.dropdown-menu>.active>a,.dropdown-menu>.active>a:focus,.dropdown-menu>.active>a:hover{
+					background-color:#2e6da4;
+					background-image:-webkit-linear-gradient(top,#337ab7 0,#2e6da4 100%);
+					background-image:-o-linear-gradient(top,#337ab7 0,#2e6da4 100%);
+					background-image:-webkit-gradient(linear,left top,left bottom,from(#337ab7),to(#2e6da4));
+					background-image:linear-gradient(to bottom,#337ab7 0,#2e6da4 100%);
+					filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff337ab7', endColorstr='#ff2e6da4', GradientType=0);
+					background-repeat:repeat-x
+				
+				}
+				
+				.dropdown-menu>.active>a,.navbar .navbar-nav .open .dropdown-menu>.active>a:focus,.navbar .navbar-nav .open .dropdown-menu>.active>a:hover{
+					color:#fff;
+					background-image:-webkit-linear-gradient(top,#337ab7 0,#2e6da4 100%);
+					background-image:-o-linear-gradient(top,#337ab7 0,#2e6da4 100%);
+					background-image:-webkit-gradient(linear,left top,left bottom,from(#337ab7),to(#2e6da4));
+					background-image:linear-gradient(to bottom,#337ab7 0,#2e6da4 100%);
+					filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff337ab7', endColorstr='#ff2e6da4', GradientType=0);
+					background-repeat:repeat-x
+				
+				}
+ 
+	#Submit {
+		margin-top:10px;
+		margin-right:10px;
+		float:right;
+		color:#FFF;
+		background:none;
+		height:38px;
+		width:94px;
+		font-size:18px;
+		border-color: #FFF;
+		border-bottom-style:solid;
+		border-bottom-color:#FFF;
+		cursor:pointer;
+	}
+	
+		#Submit:hover {
+			background-color:#35505E;
+			opacity:0.8;
+		}
+.texto{
+	width:300px;
+	float:right;
+}
+
+#datepicker {
+	margin-left:10px;
+	border-radius:6px;
+	-moz-border-radius:6px; /* Firefox */ 
+	-webkit-border-radius:6px; /* Safari */
+}
+
+#footer, #footer p {
+	text-align:center;
+	font-size:12px;
+	margin-top:10px;
+
+
+}
+
+#footer p{
+	width: 100%;
+	text-align: center;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #FFF;
+	padding-top:30px;
+}
+
+#footer img{
+	margin-top:4px;
+	width:120px;
+	margin-left:5px;
+}
+
+#sent {
+	padding-top:140px;
+	padding-bottom:140px;
+	width:100%;
+	text-align:center;
+	font-size:18px;
+}
+
+.btn-group {
+	margin-left:70px;
+}
+
+.dropOEM{
+	margin-left:30px !important;
+}
+
+#head {
+	padding-bottom:20px;
+}
+
+.dropbtn {
+	margin-left:-10px !important;
+}
+
+.btntech{
+	margin-left:-50px !important;
+}
+
+#yes, no{
+	margin-top:12px;
+}

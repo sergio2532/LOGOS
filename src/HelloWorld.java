@@ -8,6 +8,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import logica.usuarios.Docente;
+import logica.usuarios.Usuario;
+import modelo.ModeloUsuario;
 import conexion.Conexion;
 
 /**
@@ -31,11 +34,8 @@ public class HelloWorld extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Conexion conexion = new Conexion();
 		conexion.conectar();
-		if(conexion.getConexion() != null){
-			System.out.println("we have conection");
-		}else{
-			System.out.println(conexion.getMensaje());
-		}
+		Usuario docente = new Docente(new ModeloUsuario());
+		docente.crearUsuario(conexion, null);
 	}
 
 	/**

@@ -41,14 +41,14 @@ public class registrarUsuario extends HttpServlet {
 		conexion.conectar();
 		Usuario usuario;
 		
-		String nombre = request.getParameter("");
-		int codigo = Integer.parseInt(request.getParameter(""));
-		String fechaNacimiento = request.getParameter("");
-		String tipo = request.getParameter("");
-		String clave = request.getParameter("");
-		String estado = request.getParameter("");
-		String tipoidentificacion = request.getParameter("");
-		int identificacion = Integer.parseInt(request.getParameter(""));
+		String nombre = request.getParameter("nombre");
+		String codigo = request.getParameter("codigo");
+		String fechaNacimiento = request.getParameter("datepicker");
+		String tipo = "estudiante";
+		String clave = "123";
+		String estado = "activo";
+		String tipoidentificacion = request.getParameter("tipoIdentificacion");
+		int identificacion = Integer.parseInt(request.getParameter("identificacion"));
 		
 		if(tipo == "estudiante"){
 			usuario = new Estudiante(nombre, codigo, fechaNacimiento, tipo,

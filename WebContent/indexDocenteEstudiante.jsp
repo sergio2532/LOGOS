@@ -118,7 +118,7 @@
                                 <i class="fa fa-search-plus fa-3x">Observaciones</i>
                             </div>
                         </div>
-                        <img src="http://library.vstu.by/wp-content/uploads/2015/04/%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0-%D1%83%D1%85%D0%BE%D0%B4%D0%B8%D1%821.gif" class="img-responsive" alt="">
+                        <img src="http://img0102.popscreencdn.com/156390760_hand-drawn-cartoon-characters---big-eyes-and-binoculars-.jpg" class="img-responsive" alt="">
                     </a>
                 </div>                
                            

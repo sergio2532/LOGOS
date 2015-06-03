@@ -108,7 +108,7 @@
                     </a>
                 </div> 
                 <div class="row">
-                <form name="sentMessage" method = "POST" action = "/registrarUsuario" id="contactForm" novalidate>
+                <form name="sentMessage" method = "POST" action = "/LOGOS/registrarUsuario" id="contactForm" novalidate>
                 <div class="col-md-7">
                         <div class="row">
                         	<div class="col-md-3">
@@ -148,7 +148,7 @@
 			         			<label>Código :</label>
 			         		</div>
 			         		<div class="col-md-5">
-			           			<input  class="form-control" id="codigo" name="intensidad" type="text" size="45" maxlength="40" placeholder="Codigo" required="">
+			           			<input  class="form-control" id="codigo" name="codigo" type="text" size="45" maxlength="40" placeholder="Codigo" required="">
 			         			<p class="help-block text-danger"></p>
 			         		</div>
 			    		</div>			    		

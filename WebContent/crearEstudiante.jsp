@@ -115,7 +115,7 @@
                         		<label>Nombre : </label>
                         	</div>
                             <div class="col-md-5">
-                                <input type="text" class="form-control" placeholder="Nombre" id="nombre" required data-validation-required-message="Please enter your name.">
+                                <input type="text" class="form-control" placeholder="Nombre" name = "nombre" id="nombre" required data-validation-required-message="Please enter your name.">
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
@@ -125,7 +125,7 @@
 			         		</div>
 			         		<div class="col-md-5">
 					            <div id = "tipoIdentificacionT"class="col-lg-7" select style="width:180px" >
-					            	<select id = "tipoIdentificacion">
+					            	<select name = "tipoIdentificacion" id = "tipoIdentificacion">
 				      					  <option value="cedula">Cedula de ciudadania</option>
 				      					  <option value="tarjeta">Tarjeta de Identidad</option>
 				      					  <option value="extrajeria">Cedula de Extranjeria</option>
@@ -139,7 +139,7 @@
                         		<label>Identificación : </label>
                         	</div>
                             <div class="col-md-5">
-                                <input type="text" class="form-control" placeholder="Identificacion" id="identificacion" required data-validation-required-message="Please enter your name.">
+                                <input type="text" class="form-control" placeholder="Identificacion" name  = "identificacion" id="identificacion" required data-validation-required-message="Please enter your name.">
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
@@ -157,8 +157,16 @@
 			         			<label>Fecha de Nacimiento :</label>
 			         		</div>
 			         		<div class="col-md-5">
-			           			<input type="text" id="datepicker">
+			           			<input type="text" name = "datepicker" id="datepicker">
 			           			<p class="help-block text-danger"></p>
+			         		</div>
+			    		</div>
+			    		<div class="row">
+			    			<div class="col-md-3">
+			         			<label>Tipo de usuario :</label>
+			         		</div>
+			         		<div class="col-md-5">
+			           			<label id = "tipo" name = "tipo" value = "estudiante">Estudiante</label>
 			         		</div>
 			    		</div>
 			    		<br>

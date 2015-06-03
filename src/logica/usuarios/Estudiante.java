@@ -1,6 +1,7 @@
 package logica.usuarios;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -31,7 +32,7 @@ public class Estudiante extends Usuario{
 	public void crearUsuario(Conexion conexion, ModeloUsuario usuario) {
 		Connection con = conexion.getConexion();
 		try {
-			String sql = "INSERT * INTO usuario "
+			String sql = "INSERT INTO usuario "
 					+"(nombreusuario, claveusuario, codigousuario, estado, fechanacimiento,"
 					+ "tipoidentificacion, identificacion, tipousuario)"
 					+ "values(?, ?, ?, ?, ? , ? , ?, ?)";
@@ -40,7 +41,7 @@ public class Estudiante extends Usuario{
 			pst.setString(2, usuario.getClave());
 			pst.setInt(3, usuario.getCodigo());
 			pst.setString(4, usuario.getEstado());
-			pst.setString(5, usuario.getFechaNacimiento());
+			pst.setDate(5, new Date(19930813));
 			pst.setString(6, usuario.getTipoIdentificacion());
 			pst.setInt(7, usuario.getIdentinficacion());
 			pst.setString(8, usuario.getTipo());
@@ -81,7 +82,18 @@ public class Estudiante extends Usuario{
 
 	@Override
 	public ResultSet buscarTodosUsuarios(Conexion conexion) {
-		// TODO Auto-generated method stub
+		Connection con = conexion.getConexion();
+		try {
+			Statement st = con.createStatement();
+			ResultSet rs = st.executeQuery("SELECT * FROM \"Area\"");
+			
+			return rs;
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			System.out.println(conexion.getMensaje());
+			e.printStackTrace();
+		}
 		return null;
 	}
 

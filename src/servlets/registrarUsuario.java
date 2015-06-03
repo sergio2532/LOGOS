@@ -42,9 +42,9 @@ public class registrarUsuario extends HttpServlet {
 		Usuario usuario;
 		
 		String nombre = request.getParameter("nombre");
-		String codigo = request.getParameter("codigo");
+		int codigo = Integer.parseInt(request.getParameter("codigo"));
 		String fechaNacimiento = request.getParameter("datepicker");
-		String tipo = "estudiante";
+		String tipo = request.getParameter("tipo");
 		String clave = "123";
 		String estado = "activo";
 		String tipoidentificacion = request.getParameter("tipoIdentificacion");
@@ -54,7 +54,7 @@ public class registrarUsuario extends HttpServlet {
 			usuario = new Estudiante(nombre, codigo, fechaNacimiento, tipo,
 					clave, estado, tipoidentificacion, identificacion);
 		}else{
-			usuario = new Estudiante(nombre, codigo, fechaNacimiento, tipo,
+			usuario = new Docente(nombre, codigo, fechaNacimiento, tipo,
 					clave, estado, tipoidentificacion, identificacion);
 		}
 		

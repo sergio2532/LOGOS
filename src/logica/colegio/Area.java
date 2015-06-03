@@ -25,8 +25,6 @@ public class Area {
 			pst.setInt(2, area.getIntensidadHoraria());
 			
 			pst.executeUpdate();
-			
-			conexion.desconectar();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			System.out.println(conexion.getMensaje());

@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import conexion.Conexion;
+import logica.colegio.Area;
 import logica.colegio.Asignatura;
 import modelo.ModeloAsignatura;
 
@@ -31,10 +32,18 @@ public class asignatura extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		boolean flagcrear = Boolean.parseBoolean(request.getParameter("flagCrear"));
 		Conexion conexion = new Conexion();
 		conexion.conectar();
 		
-		request.getSession().setAttribute("asignaturas", new Asignatura().buscarTodasAsignaturas(conexion));
+		if(flagcrear){
+			request.getSession().setAttribute("areas", new Area().buscarTodasAreas(conexion));
+			response.sendRedirect("/LOGOS/crearAsignatura.jsp");
+		}
+		else{
+			request.getSession().setAttribute("asignaturas", new Asignatura().buscarTodasAsignaturas(conexion));
+			response.sendRedirect("/LOGOS/asignatura.jsp");
+		}
 	}
 
 	/**
@@ -45,11 +54,13 @@ public class asignatura extends HttpServlet {
 		conexion.conectar();
 		
 		ModeloAsignatura asignatura = new ModeloAsignatura();
-		asignatura.setIdArea(Integer.parseInt(request.getParameter("")));
-		asignatura.setIntensidadHoraria(Integer.parseInt(request.getParameter("")));
-		asignatura.setNombreAsignatura(request.getParameter(""));
+		asignatura.setIdArea(Integer.parseInt(request.getParameter("idArea")));
+		asignatura.setIntensidadHoraria(Integer.parseInt(request.getParameter("intensidad")));
+		asignatura.setNombreAsignatura(request.getParameter("nombre"));
 		
 		new Asignatura().crearAsignatura(asignatura, conexion);
+		
+		response.sendRedirect("/LOGOS/asignatura");
 	}
 
 }

@@ -42,6 +42,7 @@ public class area extends HttpServlet {
 		Conexion conexion = new Conexion();
 		conexion.conectar();
 		request.getSession().setAttribute("areas", new Area().buscarTodasAreas(conexion));
+		response.sendRedirect("/LOGOS/areas.jsp");
 	}
 
 	/**
@@ -52,10 +53,9 @@ public class area extends HttpServlet {
 		conexion.conectar();
 		
 		ModeloArea area = new ModeloArea();
-		area.setIntensidadHoraria(Integer.parseInt(request.getParameter("")));
-		area.setNombreArea(request.getParameter("nombreArea"));
-		
-		new Area().crearArea(area, conexion);
+		area.setIntensidadHoraria(Integer.parseInt(request.getParameter("intensidad")));
+		area.setNombreArea(request.getParameter("nombre"));
+		response.sendRedirect("/LOGOS/area");
 	}
 
 }

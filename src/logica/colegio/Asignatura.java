@@ -17,9 +17,9 @@ public class Asignatura {
 	public void crearAsignatura(ModeloAsignatura asignatura, Conexion conexion){
 		Connection con = conexion.getConexion();
 		try {
-			String sql = "INSERT INTO area "
-					+"(nombreasignatura, intensidadhorariaasignatura, idarea)"
-					+ "values(?, ?. ? )";
+			String sql = "INSERT INTO asignatura "
+					+"(nombreasignatura, intensidadhoraria, idarea)"
+					+ "values(?, ?, ? )";
 			PreparedStatement pst = con.prepareStatement(sql);
 			pst.setString(1, asignatura.getNombreAsignatura());
 			pst.setInt(2, asignatura.getIntensidadHoraria());
@@ -40,7 +40,7 @@ public class Asignatura {
 		Connection con = conexion.getConexion();
 		try {
 			Statement st = con.createStatement();
-			ResultSet rs = st.executeQuery("SELECT * FROM asignatura");
+			ResultSet rs = st.executeQuery("SELECT * FROM asignatura asig, area ar WHERE asig.idarea = ar.idarea");
 			
 			return rs;
 			

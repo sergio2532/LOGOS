@@ -2,19 +2,17 @@ package modelo;
 
 public class ModeloCurso {
 	int idCurso;
-	int prefijoCurso;
-	char letraCurso;
+	String nombreCurso;
 	int idAsignatura;
 	
 	public ModeloCurso(){
 		
 	}
 	
-	public ModeloCurso(int idCurso, int prefijoCurso, char letraCurso, int idAsignatura){
+	public ModeloCurso(int idCurso, String nombreCurso, int idAsignatura){
 		this.idAsignatura = idAsignatura;
 		this.idCurso = idCurso;
-		this.letraCurso = letraCurso;
-		this.prefijoCurso = prefijoCurso;
+		this.nombreCurso = nombreCurso;
 	}
 
 	public int getIdCurso() {
@@ -25,20 +23,12 @@ public class ModeloCurso {
 		this.idCurso = idCurso;
 	}
 
-	public int getPrefijoCurso() {
-		return prefijoCurso;
+	public String getNombreCurso() {
+		return nombreCurso;
 	}
 
-	public void setPrefijoCurso(int prefijoCurso) {
-		this.prefijoCurso = prefijoCurso;
-	}
-
-	public char getLetraCurso() {
-		return letraCurso;
-	}
-
-	public void setLetraCurso(char letraCurso) {
-		this.letraCurso = letraCurso;
+	public void setNombreCurso(String nombreCurso) {
+		this.nombreCurso = nombreCurso;
 	}
 
 	public int getIdAsignatura() {

@@ -39,7 +39,7 @@
 			alert(entrada);
 			
 			if (entrada = "asignatura"){
-			$(location).attr('href','crearAsignatura.jsp');
+				$(location).attr('href','crearAsignatura.jsp');
 			}
 		}
     </script>
@@ -101,7 +101,7 @@
             <div class="row">
             
                 <div class="col-sm-4 portfolio-item">
-                    <a href = "crearAsignatura.jsp" class="portfolio-link" data-toggle="modal">
+                    <a href = "/LOGOS/asignatura?flagCrear=true" class="portfolio-link" data-toggle="modal">
                         <div class="caption">
                             <div class="caption-content">
                                 <i class="fa fa-search-plus fa-3x" >Asignatura</i>

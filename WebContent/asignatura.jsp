@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Crear Asignatura</title>
+    <title>Asignatura</title>
 
     <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
     <link href="estilos/css/bootstrap.min.css" rel="stylesheet">
@@ -37,9 +37,7 @@
       })();
     </script>
 </head>
-<%
-   	ResultSet rs = (ResultSet)session.getAttribute("areas");
-%>
+<% ResultSet rs = (ResultSet)session.getAttribute("asignaturas");%>
 <body id="page-top" class="index">
 
     <!-- Navigation -->
@@ -96,59 +94,33 @@
                 </div>
             </div>
             <div class="row">
-            
                 <div class="col-sm-4 portfolio-item">
                     <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">                    
                     <img src="http://www.parroquiasanpedroapostol.cl/images/animatedbooklg.gif" class="img-responsive" alt="">
                     </a>
                 </div> 
-                <div class="row">
-                <form name="sentMessage" method = "POST" action = "/LOGOS/asignatura" id="contactForm" novalidate>
-                <div class="col-md-7">
-                        <div class="row">
-                        	<div class="col-md-2">
-                        		<label>Nombre : </label>
-                        	</div>
-                            <div class="col-md-5">
-                                <input type="text" class="form-control" placeholder="Nombre" id="nombre" name = "nombre" required data-validation-required-message="Please enter your name.">
-                                <p class="help-block text-danger"></p>
-                            </div>
-                        </div>
-                        <div class="row">
-	                        <div class="col-md-2">
-				    			<label>Area :</label>
-				    		</div>
-			        		<div class="col-md-5">
-			          			<select name = "idArea" id = "idArea">
-			          			<% 
-			          				while(rs.next()){
-			          					out.println("<option value = "+ rs.getInt("idarea") +">" + rs.getString("nombrearea")
-			          							+ "</option>");
-			          				}
-			          				
-			          			%>
-			          			</select>
-			        			<p class="help-block text-danger"></p>
-			        		</div>
-		    			</div>
-		    			<div class="row">
-			    			<div class="col-md-2">
-			         			<label>Intensidad Horaria :</label>
-			         		</div>
-			         		<div class="col-md-5">
-			           			<input  class="form-control" id="intensidad" name="intensidad" type="text" size="45" maxlength="40" placeholder="Intensidad Horaria" required="">
-			         			<p class="help-block text-danger"></p>
-			         		</div>
-			    		</div>
-			    		<br>
-                        <div id="success"></div>
-                        <div class="row">
-                            <div class="form-group col-xs-12">
-                                <button type="submit" class="btn btn-success btn-lg">Crear</button>
-                            </div>
-                        </div>
-		    	</div>
-		    	</form>
+                <div class="col-sm-4 portfolio-item">
+                	<table>
+                		<thead>
+                			<tr>
+                				<th>id</th>
+                				<th>nombre Asignatura</th>
+                				<th>intensidad Horaria</th>
+                				<th>Area</th>
+                			</tr>
+                		</thead>
+                		<% 
+                			while(rs.next()){
+                				out.println("<tr>");
+            					out.println("<td> " + rs.getInt("idasignatura") + " </td>");
+            					out.println("<td> " + rs.getString("nombreasignatura") + " </td>");
+            					out.println("<td> " + rs.getInt("intensidadhoraria") + " </td>");
+            					out.println("<td> " + rs.getString("nombrearea") + " </td>");
+            					out.println("</tr>");
+                			}
+                		%>
+                		
+                	</table>
                 </div>
               </div>
             </div>

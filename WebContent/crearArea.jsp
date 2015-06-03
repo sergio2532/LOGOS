@@ -98,7 +98,7 @@
                     </a>
                 </div> 
                 <div class="row">
-                <form name="sentMessage" id="contactForm" novalidate>
+                <form name="sentMessage" id="contactForm" novalidate action = "/LOGOS/area" method = "POST">
                 <div class="col-md-7">
                         <div class="row">
                         	<div class="col-md-2">

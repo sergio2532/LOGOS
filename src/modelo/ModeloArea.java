@@ -2,14 +2,14 @@ package modelo;
 
 public class ModeloArea {
 	int idArea;
-	int nombreArea;
+	String nombreArea;
 	int intensidadHoraria;
 	
 	public ModeloArea(){
 		
 	}
 		
-	public ModeloArea(int idArea, int nombreArea, int intensidadHoraria){
+	public ModeloArea(int idArea, String nombreArea, int intensidadHoraria){
 		this.idArea = idArea;
 		this.intensidadHoraria = intensidadHoraria;
 		this.nombreArea = nombreArea;
@@ -23,11 +23,11 @@ public class ModeloArea {
 		this.idArea = idArea;
 	}
 
-	public int getNombreArea() {
+	public String getNombreArea() {
 		return nombreArea;
 	}
 
-	public void setNombreArea(int nombreArea) {
+	public void setNombreArea(String nombreArea) {
 		this.nombreArea = nombreArea;
 	}
 
@@ -38,6 +38,5 @@ public class ModeloArea {
 	public void setIntensidadHoraria(int intensidadHoraria) {
 		this.intensidadHoraria = intensidadHoraria;
 	}
-	
 	
 }

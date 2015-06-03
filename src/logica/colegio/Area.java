@@ -6,24 +6,23 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-import modelo.ModeloAsignatura;
 import conexion.Conexion;
+import modelo.ModeloArea;
 
-public class Asignatura {
-	public Asignatura(){
+public class Area {
+	public Area (){
 		
 	}
 	
-	public void crearAsignatura(ModeloAsignatura asignatura, Conexion conexion){
+	public void crearArea(ModeloArea area, Conexion conexion){
 		Connection con = conexion.getConexion();
 		try {
 			String sql = "INSERT INTO area "
-					+"(nombreasignatura, intensidadhorariaasignatura, idarea)"
-					+ "values(?, ?. ? )";
+					+"(nombrearea, intensidadhorariaarea)"
+					+ "values(?, ?)";
 			PreparedStatement pst = con.prepareStatement(sql);
-			pst.setString(1, asignatura.getNombreAsignatura());
-			pst.setInt(2, asignatura.getIntensidadHoraria());
-			pst.setInt(3, asignatura.getIdArea());
+			pst.setString(1, area.getNombreArea());
+			pst.setInt(2, area.getIntensidadHoraria());
 			
 			pst.executeUpdate();
 			
@@ -36,11 +35,11 @@ public class Asignatura {
 		
 	}
 	
-	public ResultSet buscarTodasAsignaturas(Conexion conexion){
+	public ResultSet buscarTodasAreas(Conexion conexion){
 		Connection con = conexion.getConexion();
 		try {
 			Statement st = con.createStatement();
-			ResultSet rs = st.executeQuery("SELECT * FROM asignatura");
+			ResultSet rs = st.executeQuery("SELECT * FROM area");
 			
 			return rs;
 			

@@ -23,13 +23,23 @@ public class Docente extends Usuario {
 	public void crearUsuario(Conexion conexion, ModeloUsuario usuario) {
 		Connection con = conexion.getConexion();
 		try {
-			Statement st = con.createStatement();
-			ResultSet rs = st.executeQuery("SELECT * FROM \"Area\"");
+			String sql = "INSERT INTO usuario "
+					+"(nombreusuario, claveusuario, codigousuario, estado, fechanacimiento,"
+					+ "tipoidentificacion, identificacion, tipousuario)"
+					+ "values(?, ?, ?, ?, ? , ? , ?, ?)";
+			PreparedStatement pst = con.prepareStatement(sql);
+			pst.setString(1, usuario.getName());
+			pst.setString(2, usuario.getClave());
+			pst.setInt(3, usuario.getCodigo());
+			pst.setString(4, usuario.getEstado());
+			pst.setDate(5, new Date(19930813));
+			pst.setString(6, usuario.getTipoIdentificacion());
+			pst.setInt(7, usuario.getIdentinficacion());
+			pst.setString(8, usuario.getTipo());
 			
-			while(rs.next()){
-				System.out.println(rs.getString("nombreArea"));
-			}
+			pst.executeUpdate();
 			
+			conexion.desconectar();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			System.out.println(conexion.getMensaje());

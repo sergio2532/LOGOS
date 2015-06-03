@@ -18,6 +18,10 @@ public class Docente extends Usuario {
 	public Docente(ModeloUsuario usuario){
 		super(usuario);
 	}
+	
+	public Docente(){
+		
+	}
 
 	@Override
 	public void crearUsuario(Conexion conexion, ModeloUsuario usuario) {
@@ -73,7 +77,18 @@ public class Docente extends Usuario {
 
 	@Override
 	public ResultSet buscarTodosUsuarios(Conexion conexion) {
-		// TODO Auto-generated method stub
+		Connection con = conexion.getConexion();
+		try {
+			Statement st = con.createStatement();
+			ResultSet rs = st.executeQuery("SELECT * FROM usuario WHERE tipousuario = \'estudiante\'");
+			
+			return rs;
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			System.out.println(conexion.getMensaje());
+			e.printStackTrace();
+		}
 		return null;
 	}
 

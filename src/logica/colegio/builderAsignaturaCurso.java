@@ -13,6 +13,7 @@ public abstract class builderAsignaturaCurso {
 	public abstract void asignarDocente(Docente docente);
 	public abstract void crearListadoEstudiantes(Estudiante[]estudiantes);
 	public abstract void asignarCurso(Curso curso);
+	public abstract void asignarAsignatura(Asignatura asignatura);
 	
 	public AsignaturaCurso getCurso() {
 		return curso;

@@ -85,7 +85,7 @@ public class Estudiante extends Usuario{
 		Connection con = conexion.getConexion();
 		try {
 			Statement st = con.createStatement();
-			ResultSet rs = st.executeQuery("SELECT * FROM \"Area\"");
+			ResultSet rs = st.executeQuery("SELECT * FROM usuario WHERE tipousuario = \'estudiante\'");
 			
 			return rs;
 			

@@ -22,4 +22,10 @@ public class BuilderSemestral extends builderAsignaturaCurso {
 		
 	}
 
+	@Override
+	public void asignarAsignatura(Asignatura asignatura) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

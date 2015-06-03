@@ -135,7 +135,7 @@
             <div class="row">
                                 
                 <div class="col-sm-4 portfolio-item">
-                    <a href="crearDocente.jsp" class="portfolio-link" data-toggle="modal">
+                    <a href="crearArea.jsp" class="portfolio-link" data-toggle="modal">
                         <div class="caption">
                             <div class="caption-content">
                                 <i class="fa fa-search-plus fa-3x">Área</i>
@@ -154,7 +154,17 @@
                         </div>
                         <img src="http://m.gifanimados.com/Gifs-Personas/Animaciones-Profesiones/Estudiantes/Estudiante-Estudiando-60757.gif" class="img-responsive" alt="">
                     </a>
-                </div>                
+                </div>  
+                <div class="col-sm-4 portfolio-item">
+                    <a href="/LOGOS/asignaturacurso?flagCrear=true" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x">Integrar Cursos</i>
+                            </div>
+                        </div>
+                        <img src="http://3.bp.blogspot.com/-KxcqYxaBBgU/UWyHDYkbIiI/AAAAAAAABfU/DzfLkFvOdJ4/s1600/IMAGEN+BUZ%25C3%2593N.gif" class="img-responsive" alt="">
+                    </a>
+                </div>  
             </div>
         </div>
     </section>

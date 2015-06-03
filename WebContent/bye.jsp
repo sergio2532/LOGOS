@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Login</title>
+    <title>Bye Bye</title>
 
     <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
     <link href="estilos/css/bootstrap.min.css" rel="stylesheet">
@@ -49,9 +49,8 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="indexAdministrador.jsp">LOGOS</a>
+                <a class="navbar-brand" href="#page-top">LOGOS</a>
             </div>
-
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container-fluid -->
@@ -69,7 +68,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>Login</h2>
+                    <h2>Bye Bye</h2>
                     <hr class="star-light">
                 </div>
             </div>
@@ -78,36 +77,17 @@
                 <form name="sentMessage" id="contactForm" novalidate>
                 <div class="row">
                 </div>  
-                <div class="col-md-4">
+                <div class="col-md-5">
                 </div>                
                 <div class="col-md-6">
-                        <div class="row">
-                        	<div class="col-md-2">
-                        		<label>Usuario : </label>
-                        	</div>
-                            <div class="col-md-5">
-                                <input type="text" class="form-control" placeholder="Usuario" id="usuario" name="usuario" required data-validation-required-message="Please enter your name.">
-                                <p class="help-block text-danger"></p>
+                        <div class="col-sm-4 portfolio-item">
+                        <div class="caption">
+                            <div class="caption-content">
                             </div>
                         </div>
-		    			<div class="row">
-			    			<div class="col-md-2">
-			         			<label>Contraseña :</label>
-			         		</div>
-			         		<div class="col-md-5">
-			           			<input  class="form-control" id="contrasena" name="contrasena" type="text" size="45" maxlength="40" placeholder="Contraseña" required="">
-			         			<p class="help-block text-danger"></p>
-			         		</div>
-			    		</div>
-			    		<br>
-                        <div id="success"></div>
-                        <div class="row">
-                        	<div class="col-md-1">
-			         		</div>
-                            <div class="col-md-5">
-                                <button type="submit" class="btn btn-info btn-lg">Ingresar</button>
-                            </div>
-                        </div>
+                        <img src="http://player.myshared.ru/1021222/data/images/img10.gif" class="img-responsive">
+                    </a>
+                </div>
 		    	</div>
 		    	</form>
             </div>

@@ -58,7 +58,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#page-top">LOGOS</a>
+                <a class="navbar-brand" href="indexAdministrador.jsp">LOGOS</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -74,7 +74,7 @@
                         <a href="#perfil">Perfil</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#cerrarSesion">Cerrar Sesión</a>
+                        <a href="bye.jsp">Cerrar Sesión</a>
                     </li>
                 </ul>
                 
@@ -96,7 +96,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>Crear Estudiante</h2>
+                    <h2>Crear Usuario</h2>
                     <hr class="star-primary">
                 </div>
             </div>
@@ -163,12 +163,19 @@
 			    		</div>
 			    		<div class="row">
 			    			<div class="col-md-3">
-			         			<label>Tipo de usuario :</label>
+			         			<label>Tipo de Usuario :</label>
 			         		</div>
 			         		<div class="col-md-5">
-			           			<label id = "tipo" name = "tipo" value = "estudiante">Estudiante</label>
-			         		</div>
-			    		</div>
+					            <div id = "tipoT"class="col-lg-7" select style="width:180px" >
+					            	<select name = "tipo" id = "tipo">
+				      					  <option value="estudiante">Estudiante</option>
+				      					  <option value="docente">Docente</option>
+				      					  <option value="administrador">Administrador</option>
+				      					  <option value="otro">Otro</option>
+				      				</select>	              
+					            </div>
+				            </div>
+				        </div>
 			    		<br>
                         <div id="success"></div>
                         <div class="row">

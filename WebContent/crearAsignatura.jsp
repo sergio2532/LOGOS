@@ -49,7 +49,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#page-top">LOGOS</a>
+                <a class="navbar-brand" href="indexAdministrador.jsp">LOGOS</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -65,7 +65,7 @@
                         <a href="#perfil">Perfil</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#cerrarSesion">Cerrar Sesión</a>
+                        <a href="bye.jsp">Cerrar Sesión</a>
                     </li>
                 </ul>
                 
@@ -106,7 +106,7 @@
                         		<label>Nombre : </label>
                         	</div>
                             <div class="col-md-5">
-                                <input type="text" class="form-control" placeholder="Nombre" id="nombre" required data-validation-required-message="Please enter your name.">
+                                <input type="text" class="form-control" placeholder="Nombre" id="nombre" name = "nombre" required data-validation-required-message="Please enter your name.">
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
@@ -115,7 +115,7 @@
 				    			<label>Descripción :</label>
 				    		</div>
 			        		<div class="col-md-5">
-			          			<textarea  id="description" name="description" type="text" cols="24" rows="3" placeholder="Descripcion" required=""></textarea>
+			          			<textarea  id="descripcion" name="descripcion" type="text" cols="24" rows="3" placeholder="Descripcion" required=""></textarea>
 			        			<p class="help-block text-danger"></p>
 			        		</div>
 		    			</div>
